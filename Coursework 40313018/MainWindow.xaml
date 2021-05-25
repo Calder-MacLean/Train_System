@@ -1,0 +1,234 @@
+﻿<Window x:Class="Coursework_40313018.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Coursework_40313018"
+        mc:Ignorable="d"
+        Closing="MainWindow_Closing"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10,0,-5,1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="365*"/>
+            <ColumnDefinition Width="426*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnAddTrain" Content="Add Train" HorizontalAlignment="Left" Height="32" Margin="10,380,0,0" VerticalAlignment="Top" Width="114" Click="btnAddTrain_Click"/>
+        <Button x:Name="btnAddPassenger" Content="Add Passenger" HorizontalAlignment="Left" Height="32" Margin="265,380,0,0" VerticalAlignment="Top" Width="114" Click="btnAddPassenger_Click" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblPassengerName" Content="Name:" HorizontalAlignment="Left" Height="27" Margin="265,4,0,0" VerticalAlignment="Top" Width="46"/>
+        <TextBox x:Name="textboxPassengerName" HorizontalAlignment="Left" Height="27" Margin="9.5,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Grid.Column="1"/>
+        <Label x:Name="lblTrainID" Content="Train ID:" HorizontalAlignment="Left" Height="28" Margin="265,36,0,0" VerticalAlignment="Top" Width="56"/>
+        <Label x:Name="lblPassengerDepartureStation" Content="Departure Station:" HorizontalAlignment="Left" Height="24" Margin="265,69,0,0" VerticalAlignment="Top" Width="108" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblPassengerArrivalStation" Content="Arrival Station:" HorizontalAlignment="Left" Height="24" Margin="265,98,0,0" VerticalAlignment="Top" Width="108" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblFirstClass" Content="FirstClass:" HorizontalAlignment="Left" Height="24" Margin="10,262,0,0" VerticalAlignment="Top" Width="108"/>
+        <Label x:Name="lblCabin" Content="Cabin:" HorizontalAlignment="Left" Height="24" Margin="9,291,0,0" VerticalAlignment="Top" Width="108"/>
+        <Label x:Name="lblCoachNumber" Content="Coach:" HorizontalAlignment="Left" Height="24" Margin="265,127,0,0" VerticalAlignment="Top" Width="108" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblSeatNumber" Content="Seat:" HorizontalAlignment="Left" Height="24" Margin="265,156,0,0" VerticalAlignment="Top" Width="108" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="comboBoxPassengerDepartureStation" HorizontalAlignment="Left" Height="24" Margin="9.5,69,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="comboBoxDepartureStation_SelectionChanged" Grid.Column="1">
+            <ComboBoxItem x:Name="item1" Content="Edinburgh (Waverly)" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem x:Name="item6" Content="Newcastle" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem Content="Darlington" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem Content="York" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem Content="Peterborough" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem x:Name="London__Kings_Cross_" Content="London (Kings Cross)" HorizontalAlignment="Left" Width="136"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBoxPassengerArrivalStation" HorizontalAlignment="Left" Height="24" Margin="9.5,98,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="comboBoxArrivalStation_SelectionChanged" Grid.Column="1">
+            <ComboBoxItem x:Name="item7" Content="Edinburgh (Waverly)" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem x:Name="item12" Content="Newcastle" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem Content="Darlington" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem Content="York" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem Content="Peterborough" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem Content="London (Kings Cross)" HorizontalAlignment="Left" Width="136"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBoxCabin" HorizontalAlignment="Left" Height="24" Margin="113,291,0,0" VerticalAlignment="Top" Width="59" SelectionChanged="comboBoxCabin_SelectionChanged">
+            <ComboBoxItem Content="Yes" HorizontalAlignment="Left" Width="59"/>
+            <ComboBoxItem Content="No" HorizontalAlignment="Left" Width="59"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBoxPassengerCoach" Height="24" Margin="9.5,127,320,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+            <ComboBoxItem Content="A" HorizontalAlignment="Left" Width="59" Height="24"/>
+            <ComboBoxItem Content="B" HorizontalAlignment="Left" Width="59" Height="24"/>
+            <ComboBoxItem Content="C" HorizontalAlignment="Left" Width="59"/>
+            <ComboBoxItem Content="D" HorizontalAlignment="Left" Width="59"/>
+            <ComboBoxItem Content="E" HorizontalAlignment="Left" Width="59"/>
+            <ComboBoxItem Content="F" HorizontalAlignment="Left" Width="59"/>
+            <ComboBoxItem Content="G" HorizontalAlignment="Left" Width="59"/>
+            <ComboBoxItem Content="H" HorizontalAlignment="Left" Width="56"/>
+            <ComboBoxItem x:Name="item15" Content="FirstClass" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem x:Name="item16" Content="Cabin" HorizontalAlignment="Left" Width="92"/>
+        </ComboBox>
+        <Label x:Name="lblTrainID1" Content="Train ID:" HorizontalAlignment="Left" Height="24" Margin="10,10,0,0" VerticalAlignment="Top" Width="56"/>
+        <TextBox x:Name="txtboxTrainID" HorizontalAlignment="Left" Height="24" Margin="111,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="103"/>
+        <Label x:Name="lblTrainDepartureStation" Content="Departure Station:" HorizontalAlignment="Left" Height="24" Margin="9,63,0,0" VerticalAlignment="Top" Width="108"/>
+        <Label x:Name="lblTrainArrivalStation" Content="Arrival Station:" HorizontalAlignment="Left" Height="24" Margin="10,98,0,0" VerticalAlignment="Top" Width="108"/>
+        <ComboBox x:Name="comboBoxTrainDepartureStation" Height="24" Margin="111,69,105.5,0" VerticalAlignment="Top" SelectionChanged="comboBoxDepartureStation_SelectionChanged">
+            <ComboBoxItem x:Name="item17" Content="Edinburgh (Waverly)" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem x:Name="item18" Content="London (Kings Cross)" HorizontalAlignment="Left" Width="136"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBoxTrainArrivalStation" HorizontalAlignment="Left" Height="24" Margin="112,98,0,0" VerticalAlignment="Top" Width="147" SelectionChanged="comboBoxArrivalStation_SelectionChanged">
+            <ComboBoxItem x:Name="item23" Content="Edinburgh (Waverly)" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem x:Name="item24" Content="London (Kings Cross)" HorizontalAlignment="Left" Width="136"/>
+        </ComboBox>
+        <Label x:Name="lblIntervalStations" Content="Interval Stations:" HorizontalAlignment="Left" Height="24" Margin="10,124,0,0" VerticalAlignment="Top" Width="108"/>
+        <Label x:Name="lblTrainDepartureTime" Content="Departure Time:" HorizontalAlignment="Left" Height="24" Margin="9,204,0,0" VerticalAlignment="Top" Width="108"/>
+        <ComboBox x:Name="comboBoxPassengerTrainID" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="9.5,36,0,0" VerticalAlignment="Top" Width="138" />
+        <Label x:Name="lblTrainType" Content="Train Type:" HorizontalAlignment="Left" Height="30" Margin="9,34,0,0" VerticalAlignment="Top" Width="97"/>
+        <ComboBox x:Name="comboBoxTrainType" HorizontalAlignment="Left" Height="25" Margin="111,39,0,0" VerticalAlignment="Top" Width="148" SelectionChanged="comboBoxTrainType_SelectionChanged">
+            <ComboBoxItem Content="Express" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem Content="Sleeper" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem Content="Stopper" HorizontalAlignment="Left" Width="136"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBoxTrainDepartureTime" HorizontalAlignment="Left" Height="24" Margin="112,204,0,0" VerticalAlignment="Top" Width="58" SelectionChanged="comboBoxTrainDepartureTime_SelectionChanged">
+            <ComboBoxItem x:Name="time1" Content="00:00" HorizontalAlignment="Left" Width="58"/>
+            <ComboBoxItem x:Name="time2" Content="00:30" HorizontalAlignment="Left" Width="58"/>
+            <ComboBoxItem x:Name="time3" Content="01:00" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem x:Name="time4" Content="01:30" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem x:Name="time5" Content="02:00" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem x:Name="time6" Content="02:30" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem x:Name="time7" Content="03:00" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="03:30" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="04:00" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="04:30" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="05:00" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="05:30" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="06:00" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="06:30" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="07:00" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="07:30" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="08:00" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="08:30" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="09:00" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="09:30" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="10:00" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="10:30" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="11:00" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="11:30" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="12:00" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="12:30" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="13:00" HorizontalAlignment="Left" Width="92"/>
+            <ComboBoxItem Content="13:30"/>
+            <ComboBoxItem Content="14:00"/>
+            <ComboBoxItem Content="14:30"/>
+            <ComboBoxItem Content="15:00"/>
+            <ComboBoxItem Content="15:30"/>
+            <ComboBoxItem Content="16:00"/>
+            <ComboBoxItem Content="16:30"/>
+            <ComboBoxItem Content="17:00"/>
+            <ComboBoxItem Content="17:30"/>
+            <ComboBoxItem Content="18:00"/>
+            <ComboBoxItem Content="18:30"/>
+            <ComboBoxItem Content="19:00"/>
+            <ComboBoxItem Content="19:30"/>
+            <ComboBoxItem Content="20:00"/>
+            <ComboBoxItem Content="20:30"/>
+            <ComboBoxItem Content="21:00"/>
+            <ComboBoxItem Content="21:30"/>
+            <ComboBoxItem Content="22:00"/>
+            <ComboBoxItem Content="22:30"/>
+            <ComboBoxItem Content="23:00"/>
+            <ComboBoxItem Content="23:30"/>
+        </ComboBox>
+        <Label x:Name="lblTrainDepartureDate" Content="Departure Date:" HorizontalAlignment="Left" Height="24" Margin="9,233,0,0" VerticalAlignment="Top" Width="108"/>
+        <ComboBox x:Name="comboBoxTrainFirstClass" HorizontalAlignment="Left" Height="24" Margin="113,262,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="0.435,-0.455" SelectionChanged="comboBoxTrainFirstClass_SelectionChanged">
+            <ComboBoxItem x:Name="item13" Content="Yes" HorizontalAlignment="Left" Width="58"/>
+            <ComboBoxItem x:Name="item14" Content="No" HorizontalAlignment="Left" Width="92"/>
+        </ComboBox>
+        <DatePicker x:Name="datepickerTrainDepartureDate" HorizontalAlignment="Left" Margin="112,233,0,0" VerticalAlignment="Top" Height="24" Width="102"/>
+        <CheckBox x:Name="checkBoxNewcastle" Content="Newcastle" HorizontalAlignment="Left" Height="17" Margin="123,130,0,0" VerticalAlignment="Top" Width="103" Checked="checkBoxNewcastle_Checked"/>
+        <CheckBox x:Name="checkBoxDarlington" Content="Darlington" HorizontalAlignment="Left" Height="17" Margin="123,147,0,0" VerticalAlignment="Top" Width="103" Checked="checkBoxDarlington_Checked"/>
+        <CheckBox x:Name="checkBoxYork" Content="York" HorizontalAlignment="Left" Height="17" Margin="123,164,0,0" VerticalAlignment="Top" Width="103" Checked="checkBoxYork_Checked"/>
+        <CheckBox x:Name="checkBoxPeterborough" Content="Peterborough" HorizontalAlignment="Left" Height="17" Margin="123,183,0,0" VerticalAlignment="Top" Width="103" Checked="checkBoxPeterborough_Checked"/>
+        <Label x:Name="lblFirstClass_Copy" Content="FirstClass:" HorizontalAlignment="Left" Height="24" Margin="265,185,0,0" VerticalAlignment="Top" Width="108" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblCabin_Copy" Content="Cabin:" HorizontalAlignment="Left" Height="24" Margin="265,215,0,0" VerticalAlignment="Top" Width="108" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="textBlockFirstClass" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="9.5,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+        <TextBlock x:Name="textBlockCabin" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="9.5,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btnSearchDepartureDate" Content="Departure Date Search" HorizontalAlignment="Left" Height="29" Margin="129.5,382,0,0" VerticalAlignment="Top" Width="128" Click="btnSearchDepartureDate_Click" Grid.Column="1"/>
+        <Button x:Name="btnTrainSatationSearch" Content="Trains Between Stations" HorizontalAlignment="Left" Height="29" Margin="277.5,382,0,0" VerticalAlignment="Top" Width="134" Grid.Column="1" Click="btnTrainSatationSearch_Click"/>
+        <ListBox x:Name="listBoxTrainSearchResults" HorizontalAlignment="Left" Height="101" Margin="129.5,262,0,0" VerticalAlignment="Top" Width="128" SelectionChanged="listBoxTrainSearchResults_SelectionChanged" Grid.Column="1"/>
+        <Label x:Name="lblTrainDepartureDate_Copy" Content="Departure Date:" HorizontalAlignment="Left" Height="24" Margin="129.5,205,0,0" VerticalAlignment="Top" Width="108" Grid.Column="1"/>
+        <DatePicker x:Name="datepickerSearchTrainDepartureDate" HorizontalAlignment="Left" Margin="129.5,234,0,0" VerticalAlignment="Top" Height="24" Width="102" Grid.Column="1"/>
+        <ComboBox x:Name="comboBoxPassengerSeat" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="8.5,156,0,0" VerticalAlignment="Top" Width="60" SelectionChanged="comboBoxPassengerSeat_SelectionChanged">
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="4"/>
+            <ComboBoxItem Content="5"/>
+            <ComboBoxItem Content="6"/>
+            <ComboBoxItem Content="7"/>
+            <ComboBoxItem Content="8"/>
+            <ComboBoxItem Content="9"/>
+            <ComboBoxItem Content="10"/>
+            <ComboBoxItem Content="11"/>
+            <ComboBoxItem Content="12"/>
+            <ComboBoxItem Content="13"/>
+            <ComboBoxItem Content="14"/>
+            <ComboBoxItem Content="15"/>
+            <ComboBoxItem Content="16"/>
+            <ComboBoxItem Content="17"/>
+            <ComboBoxItem Content="18"/>
+            <ComboBoxItem Content="19"/>
+            <ComboBoxItem Content="20"/>
+            <ComboBoxItem Content="21"/>
+            <ComboBoxItem Content="22"/>
+            <ComboBoxItem Content="23"/>
+            <ComboBoxItem Content="24"/>
+            <ComboBoxItem Content="25"/>
+            <ComboBoxItem Content="26"/>
+            <ComboBoxItem Content="27"/>
+            <ComboBoxItem Content="28"/>
+            <ComboBoxItem Content="29"/>
+            <ComboBoxItem Content="30"/>
+            <ComboBoxItem Content="31"/>
+            <ComboBoxItem Content="32"/>
+            <ComboBoxItem Content="33"/>
+            <ComboBoxItem Content="34"/>
+            <ComboBoxItem Content="35"/>
+            <ComboBoxItem Content="36"/>
+            <ComboBoxItem Content="37"/>
+            <ComboBoxItem Content="38"/>
+            <ComboBoxItem Content="39"/>
+            <ComboBoxItem Content="40"/>
+            <ComboBoxItem Content="41"/>
+            <ComboBoxItem Content="42"/>
+            <ComboBoxItem Content="43"/>
+            <ComboBoxItem Content="44"/>
+            <ComboBoxItem Content="45"/>
+            <ComboBoxItem Content="46"/>
+            <ComboBoxItem Content="47"/>
+            <ComboBoxItem Content="48"/>
+            <ComboBoxItem Content="49"/>
+            <ComboBoxItem Content="50"/>
+            <ComboBoxItem Content="51"/>
+            <ComboBoxItem Content="52"/>
+            <ComboBoxItem Content="53"/>
+            <ComboBoxItem Content="54"/>
+            <ComboBoxItem Content="55"/>
+            <ComboBoxItem Content="56"/>
+            <ComboBoxItem Content="57"/>
+            <ComboBoxItem Content="58"/>
+            <ComboBoxItem Content="59"/>
+            <ComboBoxItem Content="60"/>
+        </ComboBox>
+        <ListBox x:Name="listBoxTrainPassengers" HorizontalAlignment="Left" Height="94" Margin="265,269,0,0" VerticalAlignment="Top" Width="153" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblPassengers" Content="passengers:" HorizontalAlignment="Left" Height="29" Margin="265,240,0,0" VerticalAlignment="Top" Width="108" Grid.ColumnSpan="2"/>
+        <ListBox x:Name="listBoxSearchTrain2Points" Grid.Column="1" HorizontalAlignment="Left" Height="101" Margin="277.5,262,0,0" VerticalAlignment="Top" Width="124"/>
+        <Label x:Name="lblTrainDepartureStation_Copy" Content="Departure Station:" HorizontalAlignment="Left" Height="24" Margin="293.5,98,0,0" VerticalAlignment="Top" Width="108" Grid.Column="1"/>
+        <Label x:Name="lblTrainArrivalStation_Copy" Content="Arrival Station:" HorizontalAlignment="Left" Height="24" Margin="293.5,156,0,0" VerticalAlignment="Top" Width="108" Grid.Column="1"/>
+        <ComboBox x:Name="comboBoxSearchDepartureStation" HorizontalAlignment="Left" Height="24" Margin="293.5,127,0,0" VerticalAlignment="Top" Width="118" SelectionChanged="comboBoxDepartureStation_SelectionChanged" Grid.Column="1">
+            <ComboBoxItem x:Name="item2" Content="Edinburgh (Waverly)" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem x:Name="item3" Content="Newcastle" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem Content="Darlington" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem Content="York" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem Content="Peterborough" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem x:Name="London__Kings_Cross_1" Content="London (Kings Cross)" HorizontalAlignment="Left" Width="136"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBoxSearchArrivalStation" HorizontalAlignment="Left" Height="24" Margin="293.5,180,0,0" VerticalAlignment="Top" Width="118" SelectionChanged="comboBoxDepartureStation_SelectionChanged" Grid.Column="1">
+            <ComboBoxItem x:Name="item4" Content="Edinburgh (Waverly)" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem x:Name="item5" Content="Newcastle" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem Content="Darlington" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem Content="York" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem Content="Peterborough" HorizontalAlignment="Left" Width="136"/>
+            <ComboBoxItem x:Name="London__Kings_Cross_2" Content="London (Kings Cross)" HorizontalAlignment="Left" Width="136"/>
+        </ComboBox>
+        <ListBox x:Name="listBoxTrainsAdded" HorizontalAlignment="Left" Height="55" Margin="10,320,0,0" VerticalAlignment="Top" Width="162"/>
+
+    </Grid>
+</Window>
