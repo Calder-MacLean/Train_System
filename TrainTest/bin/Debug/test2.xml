@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sleeperTrain xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>1A42</ID>
+  <departure>London Kings Cross</departure>
+  <destination>Edingburgh Waverly</destination>
+  <type>Sleeper</type>
+  <firstClass>Yes</firstClass>
+  <sleeper>Yes</sleeper>
+  <cost>50</cost>
+  <stops>Newcastle</stops>
+</sleeperTrain>

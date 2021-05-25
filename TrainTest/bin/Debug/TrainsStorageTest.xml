@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<expressTrain xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>1A32</ID>
+  <departure>Edingburgh Waverly</departure>
+  <destination>London Kings Cross</destination>
+  <type>Express</type>
+  <firstClass>true</firstClass>
+  <sleeper>false</sleeper>
+  <ticketCost>0</ticketCost>
+</expressTrain><?xml version="1.0" encoding="utf-8"?>
+<sleeperTrain xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>1A42</ID>
+  <departure>London Kings Cross</departure>
+  <destination>Edingburgh Waverly</destination>
+  <type>Sleeper</type>
+  <firstClass>true</firstClass>
+  <sleeper>false</sleeper>
+  <ticketCost>0</ticketCost>
+  <stops>Newcastle</stops>
+</sleeperTrain><?xml version="1.0" encoding="utf-8"?>
+<stopperTrain xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>1A22</ID>
+  <departure>Newcastle</departure>
+  <destination>York</destination>
+  <type>Stopper</type>
+  <firstClass>true</firstClass>
+  <sleeper>true</sleeper>
+  <ticketCost>0</ticketCost>
+  <stops>Darlington</stops>
+</stopperTrain><?xml version="1.0" encoding="utf-8"?>
+<expressTrain xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>1A32</ID>
+  <departure>Edingburgh Waverly</departure>
+  <destination>London Kings Cross</destination>
+  <type>Express</type>
+  <firstClass>true</firstClass>
+  <sleeper>false</sleeper>
+  <ticketCost>0</ticketCost>
+</expressTrain><?xml version="1.0" encoding="utf-8"?>
+<sleeperTrain xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>1A42</ID>
+  <departure>London Kings Cross</departure>
+  <destination>Edingburgh Waverly</destination>
+  <type>Sleeper</type>
+  <firstClass>true</firstClass>
+  <sleeper>false</sleeper>
+  <ticketCost>0</ticketCost>
+  <stops>Newcastle</stops>
+</sleeperTrain><?xml version="1.0" encoding="utf-8"?>
+<stopperTrain xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>1A22</ID>
+  <departure>Newcastle</departure>
+  <destination>York</destination>
+  <type>Stopper</type>
+  <firstClass>true</firstClass>
+  <sleeper>true</sleeper>
+  <ticketCost>0</ticketCost>
+  <stops>Darlington</stops>
+</stopperTrain>

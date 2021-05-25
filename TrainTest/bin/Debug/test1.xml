@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<expressTrain xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>1A32</ID>
+  <departure>Edingburgh Waverly</departure>
+  <destination>London Kings Cross</destination>
+  <type>Express</type>
+  <firstClass>Yes</firstClass>
+  <sleeper>No</sleeper>
+  <cost>50</cost>
+</expressTrain>

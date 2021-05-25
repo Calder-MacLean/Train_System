@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stopperTrain xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID></ID>
+  <departure>Newcastle</departure>
+  <destination>York</destination>
+  <type>Stopper</type>
+  <firstClass>Yes</firstClass>
+  <sleeper>Yes</sleeper>
+  <cost>50</cost>
+  <stops>Darlington, york</stops>
+</stopperTrain>
